@@ -8,13 +8,3 @@ describe 'Route to view' do
   end
 end
 
-describe 'Multiple students are shown' do
-  it 'on the index page' do
-    Student.create!(first_name: "Daenerys", last_name: "Targaryen")
-    Student.create!(first_name: "Lindsey", last_name: "Stirling")
-
-    visit "/students"
-
-    assert_text("Daenerys", "Lindsey")
-  end
-end
